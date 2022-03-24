@@ -11,8 +11,8 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 import FormGroup from '@mui/material/FormGroup';
 import MenuItem from '@mui/material/MenuItem';
 import Menu from '@mui/material/Menu';
-import Avatar from '@mui/material/Avatar';
-import imagem from '../../assets/Beer3.svg'
+
+
 import { BsFacebook,BsInstagram } from "react-icons/bs";
 
 export default function MenuAppBar() {
