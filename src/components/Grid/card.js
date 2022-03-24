@@ -35,7 +35,7 @@ export default function ComplexGrid({img,desc,tamanho,valor,logos,bg}) {
                         <Img alt="torre" src={img} sx={{ borderRadius:3,width:115,height:115 }} />
                     
                 </Box>
-                <Divider orientation="vertical" flexItem />
+                
                 
                 <Box sx={{display:"flex",justifyContent:"space-around"}}>
 
@@ -44,10 +44,10 @@ export default function ComplexGrid({img,desc,tamanho,valor,logos,bg}) {
                             {desc} {tamanho} 
                         </Typography>
                        {logos.length>0 && (<Box>
-                        <Typography sx={{fontWeight:"bold",fontSize:10,fontFamily:"sans-serif",marginBottom:2,marginLeft:2}}  variant="body2" gutterBottom>
+                        <Typography sx={{fontWeight:"bold",fontSize:10,fontFamily:"sans-serif",marginBottom:2}}  variant="body2" gutterBottom>
                             Opções Disponiveis:
                             </Typography>
-                            <Box sx={{ display: "flex", maxWidth: 150, justifyContent: "space-around",marginBottom:5 }}>
+                            <Box sx={{ display: "flex", maxWidth: 100,maxHeight:10, justifyContent: "space-around",marginBottom:5,marginLeft:1,alignItems:"center" }}>
 
                             {logos.map(logo=>( <Img alt='imagem' src={logo} sx={{ height: "30%", width: "30%" }}></Img>))}
                             </Box>

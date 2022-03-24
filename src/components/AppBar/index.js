@@ -13,7 +13,7 @@ import MenuItem from '@mui/material/MenuItem';
 import Menu from '@mui/material/Menu';
 
 
-import { BsFacebook,BsInstagram } from "react-icons/bs";
+import { BsFacebook,BsInstagram,BsWhatsapp } from "react-icons/bs";
 
 export default function MenuAppBar() {
   const [auth, setAuth] = React.useState(true);
@@ -83,8 +83,9 @@ export default function MenuAppBar() {
                 onClose={handleClose2}
                
               >
-                <MenuItem sx={{display:"flex",justifyContent:"space-around",width:"150px"}} onClick={handleClose2}><BsInstagram></BsInstagram>Instagran</MenuItem>
-                <MenuItem sx={{display:"flex",justifyContent:"space-around",width:"150px"}} onClick={handleClose2}><BsFacebook></BsFacebook>Facebook</MenuItem>
+                <MenuItem sx={{display:"flex",justifyContent:"space-around",width:"150px"}} onClick={()=>{window.open("http://www.instagran.com/cantinho_dalora");handleClose2()}}><BsInstagram></BsInstagram>Instagran</MenuItem>
+                <MenuItem sx={{display:"flex",justifyContent:"space-around",width:"150px"}} onClick={()=>{window.open("https://www.facebook.com/cantinhodalora");handleClose2()}}><BsFacebook></BsFacebook>Facebook</MenuItem>
+                <MenuItem sx={{display:"flex",justifyContent:"space-around",width:"150px"}} onClick={()=>{window.open("https://api.whatsapp.com/send?phone=+5596981325410&text=Oi");handleClose2()}}><BsWhatsapp></BsWhatsapp>Whatsap</MenuItem>
               </Menu>
 
           <Typography variant="h6" component="div" sx={{ flexGrow: 1,textAlign:"center",fontSize:30 }}>
