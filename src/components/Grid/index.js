@@ -76,10 +76,10 @@ export default function GridContainer() {
         </Grid>
         
         <Grid item xs={12} sm={6} md={4} lg={2}>
-          <ComplexGrid img={imglongSkol} desc="Skol Sense" tamanho=" 275 ML" valor="15,00" logos={[]} ></ComplexGrid>
+          <ComplexGrid img={imglongSkol} desc="Skol Sense" tamanho=" 269 ML" valor="15,00" logos={[]} ></ComplexGrid>
         </Grid>
         <Grid item xs={12} sm={6} md={4} lg={2}>
-          <ComplexGrid img={imglongGt} desc="Skol GT" tamanho=" 275 ML" valor="15,00" logos={[]} ></ComplexGrid>
+          <ComplexGrid img={imglongGt} desc="Skol GT" tamanho=" 269 ML" valor="15,00" logos={[]} ></ComplexGrid>
         </Grid>
         <Grid item xs={12} sm={6} md={4} lg={2}>
           <ComplexGrid img={imgHeineken} desc="Heineken" tamanho=" 330 ML" valor="12,00" logos={[]} ></ComplexGrid>
@@ -127,7 +127,7 @@ export default function GridContainer() {
           <ComplexGrid img={imgBrahmaChop} desc="Brahma Chop " tamanho=" 350 ML" valor="5,00" logos={[]} ></ComplexGrid>
         </Grid>
         <Grid item xs={12} sm={6} md={4} lg={2}>
-          <ComplexGrid img={imgIcelimao} desc="Ice Limão" tamanho="" valor="10,00" logos={[]} ></ComplexGrid>
+          <ComplexGrid img={imgIcelimao} desc="Ice Limão" tamanho=" 275 ML" valor="10,00" logos={[]} ></ComplexGrid>
         </Grid>
         <Grid item xs={12} sm={6} md={4} lg={2}>
           <ComplexGrid img={imgRedbull} desc="Red Bull" tamanho="" valor="15,00" logos={[]} ></ComplexGrid>
