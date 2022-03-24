@@ -4,11 +4,12 @@ import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import ComplexGrid from './card';
+import ButtonBase from '@mui/material/ButtonBase';
+
 import logoHeineken from '../../assets/heineken.svg';
 import logostella from '../../assets/stella.svg';
 import logoRoscoff from '../../assets/roscoff.png';
 import logoorloff from '../../assets/orlof.jpg';
-
 import logoBudwaiser from '../../assets/budweiser.jpg';
 import logoskol from '../../assets/skol.svg'
 import logoitaipava from '../../assets/itaipava.svg'
@@ -20,7 +21,7 @@ import imgItaipavalitro from '../../assets/itaipavalitro.jpg';
 import imglongNeks from '../../assets/longneks.png'
 import imglongSkol from '../../assets/long_skol.jpg'
 import imgtorre from '../../assets/torre.jpg'
-import imgPromo from '../../assets/promoção.jpg'
+import imgPromo from '../../assets/Torres.png'
 import imgSkolPilse from '../../assets/skolpilse.jpg'
 import imgSkolpm from '../../assets/skol_pm.jpg'
 import imgSkolpm269 from '../../assets/skol_pm_269.jpg'
@@ -41,6 +42,10 @@ import imgCalton from '../../assets/calton.png'
 import imgCaltonC from '../../assets/caltoncereja.jpeg'
 import imghalls from '../../assets/halls.jpg'
 import imgchiclet from '../../assets/chiclet.jpg'
+import imgOpclient from '../../assets/joinha.jpg'
+import imgHeineken from '../../assets/heineken.jpg'
+import imgBudlong from '../../assets/budweiserlong.jpg'
+import imgStellalong from '../../assets/stella.jpg'
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -52,121 +57,134 @@ const Item = styled(Paper)(({ theme }) => ({
 
 export default function GridContainer() {
   return (
-    <Box sx={{ flexGrow: 1,marginTop:5,marginBottom:2 }}>
-      <Grid container  alignItems="center" spacing={2}>
+    <Box sx={{ flexGrow: 1, marginTop: 5, marginBottom: 2 }}>
+      <Grid container alignItems="center" spacing={2}>
         <Grid item xs={12} sm={6} md={4} lg={2}>
-         <ComplexGrid bg={"#fff"} img={imgPromo} desc="Promoção do dia: Compre duas torres de R$50,00 e ganhe uma caipirinha" tamanho="" valor="0,00" logos={[]} ></ComplexGrid>
+          <ComplexGrid bg={"#fff"} img={imgPromo} desc="Promoção do dia: Compre duas torres de R$50,00 e ganhe uma caipirinha" tamanho="" valor="0,00" logos={[]} ></ComplexGrid>
         </Grid>
         <Grid item xs={12} sm={6} md={4} lg={2}>
-         <ComplexGrid img={imgtorre} desc="Torre" tamanho="3.5 L" valor=" 50,00" logos={[logoskol,logoitaipava,logobrahma]} ></ComplexGrid>
+          <ButtonBase onClick={() => window.open("https://opclient-web.herokuapp.com/totem/ce06443882c49b050a38d99b755f78c7/8a1cb6b06cbf0d2ec6a6556d074ebedb-00595512240")} >
+            <ComplexGrid bg={"#fff"} img={imgOpclient} desc="Gostou! Deixe-nos suas sugestões, são de Grande Valor para a melhoria de nossos serviços. " tamanho="" valor="0,00" logos={[]} >
+            </ComplexGrid>
+          </ButtonBase>
         </Grid>
         <Grid item xs={12} sm={6} md={4} lg={2}>
-         <ComplexGrid img={imgtorre} desc="Torre" tamanho="2.5 L" valor=" 40,00" logos={[logoskol,logoitaipava,logobrahma]} ></ComplexGrid>
+          <ComplexGrid img={imgtorre} desc="Torre" tamanho="3.5 L" valor=" 50,00" logos={[logoskol, logoitaipava, logobrahma]} ></ComplexGrid>
         </Grid>
         <Grid item xs={12} sm={6} md={4} lg={2}>
-         <ComplexGrid img={imglongNeks} desc="Long Neks" tamanho=" 330 ML" valor="12,00" logos={[logoHeineken,logostella,logoBudwaiser]} ></ComplexGrid>
-        </Grid>
-        <Grid item xs={12} sm={6} md={4} lg={2}> 
-         <ComplexGrid img={imglongSkol} desc="Skol Sense" tamanho=" 330 ML" valor="15,00" logos={[]} ></ComplexGrid>
-        </Grid>
-        <Grid item xs={12} sm={6} md={4} lg={2}>
-         <ComplexGrid img={imglongGt} desc="Skol GT" tamanho=" 330 ML" valor="15,00" logos={[]} ></ComplexGrid>
-        </Grid>
-        <Grid item xs={12} sm={6} md={4} lg={2}>
-         <ComplexGrid img={imgitaipava269} desc="Itaipava" tamanho=" 269 ML" valor="5,00" logos={[]} ></ComplexGrid>
-        </Grid>
-        <Grid item xs={12} sm={6} md={4} lg={2}>
-         <ComplexGrid img={imgItaipava350} desc="Itaipava" tamanho=" 350 ML" valor="5,00" logos={[]} ></ComplexGrid>
-        </Grid>
-        <Grid item xs={12} sm={6} md={4} lg={2}>
-         <ComplexGrid img={imgItaipavalitro} desc="Itaipava" tamanho=" 1 L" valor="15,00" logos={[]} ></ComplexGrid>
-        </Grid>
-        <Grid item xs={12} sm={6} md={4} lg={2}>
-         <ComplexGrid img={imgAbacaxi} desc="Abacaxi" tamanho="" valor="12,00" logos={[]} ></ComplexGrid>
-        </Grid>
-        <Grid item xs={12} sm={6} md={4} lg={2}>
-         <ComplexGrid img={imgSkolPilse} desc="Skol Pilse" tamanho=" 1 L" valor="15,00" logos={[]} ></ComplexGrid>
-        </Grid>
-        <Grid item xs={12} sm={6} md={4} lg={2}>
-         <ComplexGrid img={imgSkolpm} desc="Skol Puro Malte" tamanho=" 1 L" valor="15,00" logos={[]} ></ComplexGrid>
-        </Grid>
-        <Grid item xs={12} sm={6} md={4} lg={2}>
-         <ComplexGrid img={imgSkolpm} desc="Skol Puro Malte" tamanho=" 600 ML" valor="10,00" logos={[]} ></ComplexGrid>
-        </Grid>
-        <Grid item xs={12} sm={6} md={4} lg={2}>
-         <ComplexGrid img={imgSkolpm269} desc="Skol Puro Malte" tamanho=" 269 ML" valor="5,00" logos={[]} ></ComplexGrid>
-        </Grid>
-        <Grid item xs={12} sm={6} md={4} lg={2}>
-         <ComplexGrid img={imgSkolpm269} desc="Skol Puro Malte" tamanho=" 350 ML" valor="5,00" logos={[]} ></ComplexGrid>
-        </Grid>
-        <Grid item xs={12} sm={6} md={4} lg={2}>
-         <ComplexGrid img={imgBrahmadp600} desc="Brahma Duplo Malte" tamanho=" 600 ML" valor="10,00" logos={[]} ></ComplexGrid>
-        </Grid>
-        <Grid item xs={12} sm={6} md={4} lg={2}>
-         <ComplexGrid img={imgBrahmadp350} desc="Brahma Duplo Malte" tamanho=" 350 ML" valor="8,00" logos={[]} ></ComplexGrid>
-        </Grid>
-        <Grid item xs={12} sm={6} md={4} lg={2}>
-         <ComplexGrid img={imgBrahmaChop} desc="Brahma Chop " tamanho=" 350 ML" valor="5,00" logos={[]} ></ComplexGrid>
-        </Grid>
-        <Grid item xs={12} sm={6} md={4} lg={2}>
-         <ComplexGrid img={imgIcelimao} desc="Ice Limão" tamanho="" valor="10,00" logos={[]} ></ComplexGrid>
-        </Grid>
-        <Grid item xs={12} sm={6} md={4} lg={2}>
-         <ComplexGrid img={imgRedbull} desc="Red Bull" tamanho="" valor="15,00" logos={[]} ></ComplexGrid>
-        </Grid>
-        <Grid item xs={12} sm={6} md={4} lg={2}>
-         <ComplexGrid img={imgBohemia} desc="Bohemia" tamanho=" 350 ML" valor="5,00" logos={[]} ></ComplexGrid>
-        </Grid>
-        <Grid item xs={12} sm={6} md={4} lg={2}>
-         <ComplexGrid img={imgAmistel350} desc="Amstel" tamanho=" 350 ML" valor="5,00" logos={[]} ></ComplexGrid>
-        </Grid>
-        <Grid item xs={12} sm={6} md={4} lg={2}>
-         <ComplexGrid img={imgRefrigerantes} desc="Refrigerantes" tamanho=" 350 ML" valor="5,00" logos={[]} ></ComplexGrid>
-        </Grid>
-        <Grid item xs={12} sm={6} md={4} lg={2}>
-         <ComplexGrid img={imgCoco} desc="COCO Gelado" tamanho="" valor="5,00" logos={[]} ></ComplexGrid>
-        </Grid>
-        <Grid item xs={12} sm={6} md={4} lg={2}>
-         <ComplexGrid img={imgCaipirinha} desc="Caipirinha" tamanho=" 500 ML" valor="10,00" logos={[]} ></ComplexGrid>
-        </Grid>
-        <Grid item xs={12} sm={6} md={4} lg={2}>
-         <ComplexGrid img={imgCaipirinha} desc="Caipiroska" tamanho=" 500 ML" valor="12,00" logos={[logoRoscoff,logoorloff]} ></ComplexGrid>
-        </Grid>
-        <Grid item xs={12} sm={6} md={4} lg={2}>
-         <ComplexGrid img={imgLucky} desc="Lucky Strike" tamanho=" 20 UND" valor="20,00" logos={[]} ></ComplexGrid>
-        </Grid>
-        <Grid item xs={12} sm={6} md={4} lg={2}>
-         <ComplexGrid img={imgLucky} desc="Lucky Strike" tamanho=" 1 UND" valor="1,00" logos={[]} ></ComplexGrid>
-        </Grid>
-        <Grid item xs={12} sm={6} md={4} lg={2}>
-         <ComplexGrid img={imgCaltonC} desc="DUNHILL Mentolado" tamanho=" 20 UND" valor="20,00" logos={[]} ></ComplexGrid>
-        </Grid>
-        <Grid item xs={12} sm={6} md={4} lg={2}>
-         <ComplexGrid img={imgCaltonC} desc="DUNHILL Mentolado" tamanho=" 1 UND" valor="1,00" logos={[]} ></ComplexGrid>
-        </Grid>
-        <Grid item xs={12} sm={6} md={4} lg={2}>
-         <ComplexGrid img={imgCalton} desc="DUNHILL Bland" tamanho=" 1 UND" valor="1,00" logos={[]} ></ComplexGrid>
-        </Grid>
-        <Grid item xs={12} sm={6} md={4} lg={2}>
-         <ComplexGrid img={imgCalton} desc="DUNHILL Bland" tamanho=" 20 UND" valor="20,00" logos={[]} ></ComplexGrid>
-        </Grid>
-        <Grid item xs={12} sm={6} md={4} lg={2}>
-         <ComplexGrid img={imgKent} desc="Kent" tamanho=" 20 UND" valor="20,00" logos={[]} ></ComplexGrid>
-        </Grid>
-        <Grid item xs={12} sm={6} md={4} lg={2}>
-         <ComplexGrid img={imgKent} desc="Kent" tamanho=" 1 UND" valor="1,00" logos={[]} ></ComplexGrid>
-        </Grid>
-        <Grid item xs={12} sm={6} md={4} lg={2}>
-         <ComplexGrid img={imghalls} desc="Halls" tamanho=" 1 UND" valor="2,00" logos={[]} ></ComplexGrid>
-        </Grid>
-        <Grid item xs={12} sm={6} md={4} lg={2}>
-         <ComplexGrid img={imgchiclet} desc="Chiclets" tamanho=" 4 UND" valor="1,00" logos={[]} ></ComplexGrid>
+          <ComplexGrid img={imgtorre} desc="Torre" tamanho="2.5 L" valor=" 40,00" logos={[logoskol, logoitaipava, logobrahma]} ></ComplexGrid>
         </Grid>
         
-        
-        
-        
-        
+        <Grid item xs={12} sm={6} md={4} lg={2}>
+          <ComplexGrid img={imglongSkol} desc="Skol Sense" tamanho=" 275 ML" valor="15,00" logos={[]} ></ComplexGrid>
+        </Grid>
+        <Grid item xs={12} sm={6} md={4} lg={2}>
+          <ComplexGrid img={imglongGt} desc="Skol GT" tamanho=" 275 ML" valor="15,00" logos={[]} ></ComplexGrid>
+        </Grid>
+        <Grid item xs={12} sm={6} md={4} lg={2}>
+          <ComplexGrid img={imgHeineken} desc="Heineken" tamanho=" 330 ML" valor="12,00" logos={[]} ></ComplexGrid>
+        </Grid>
+        <Grid item xs={12} sm={6} md={4} lg={2}>
+          <ComplexGrid img={imgStellalong} desc="Stella" tamanho=" 275 ML" valor="10,00" logos={[]} ></ComplexGrid>
+        </Grid>
+        <Grid item xs={12} sm={6} md={4} lg={2}>
+          <ComplexGrid img={imgBudlong} desc="Budweiser" tamanho=" 330 ML" valor="10,00" logos={[]} ></ComplexGrid>
+        </Grid>
+        <Grid item xs={12} sm={6} md={4} lg={2}>
+          <ComplexGrid img={imgitaipava269} desc="Itaipava" tamanho=" 269 ML" valor="5,00" logos={[]} ></ComplexGrid>
+        </Grid>
+        <Grid item xs={12} sm={6} md={4} lg={2}>
+          <ComplexGrid img={imgItaipava350} desc="Itaipava" tamanho=" 350 ML" valor="5,00" logos={[]} ></ComplexGrid>
+        </Grid>
+        <Grid item xs={12} sm={6} md={4} lg={2}>
+          <ComplexGrid img={imgItaipavalitro} desc="Itaipava" tamanho=" 1 L" valor="15,00" logos={[]} ></ComplexGrid>
+        </Grid>
+        <Grid item xs={12} sm={6} md={4} lg={2}>
+          <ComplexGrid img={imgAbacaxi} desc="Abacaxi" tamanho="" valor="12,00" logos={[]} ></ComplexGrid>
+        </Grid>
+        <Grid item xs={12} sm={6} md={4} lg={2}>
+          <ComplexGrid img={imgSkolPilse} desc="Skol Pilse" tamanho=" 1 L" valor="15,00" logos={[]} ></ComplexGrid>
+        </Grid>
+        <Grid item xs={12} sm={6} md={4} lg={2}>
+          <ComplexGrid img={imgSkolpm} desc="Skol Puro Malte" tamanho=" 1 L" valor="15,00" logos={[]} ></ComplexGrid>
+        </Grid>
+        <Grid item xs={12} sm={6} md={4} lg={2}>
+          <ComplexGrid img={imgSkolpm} desc="Skol Puro Malte" tamanho=" 600 ML" valor="10,00" logos={[]} ></ComplexGrid>
+        </Grid>
+        <Grid item xs={12} sm={6} md={4} lg={2}>
+          <ComplexGrid img={imgSkolpm269} desc="Skol Puro Malte" tamanho=" 269 ML" valor="5,00" logos={[]} ></ComplexGrid>
+        </Grid>
+        <Grid item xs={12} sm={6} md={4} lg={2}>
+          <ComplexGrid img={imgSkolpm269} desc="Skol Puro Malte" tamanho=" 350 ML" valor="5,00" logos={[]} ></ComplexGrid>
+        </Grid>
+        <Grid item xs={12} sm={6} md={4} lg={2}>
+          <ComplexGrid img={imgBrahmadp600} desc="Brahma Duplo Malte" tamanho=" 600 ML" valor="10,00" logos={[]} ></ComplexGrid>
+        </Grid>
+        <Grid item xs={12} sm={6} md={4} lg={2}>
+          <ComplexGrid img={imgBrahmadp350} desc="Brahma Duplo Malte" tamanho=" 350 ML" valor="8,00" logos={[]} ></ComplexGrid>
+        </Grid>
+        <Grid item xs={12} sm={6} md={4} lg={2}>
+          <ComplexGrid img={imgBrahmaChop} desc="Brahma Chop " tamanho=" 350 ML" valor="5,00" logos={[]} ></ComplexGrid>
+        </Grid>
+        <Grid item xs={12} sm={6} md={4} lg={2}>
+          <ComplexGrid img={imgIcelimao} desc="Ice Limão" tamanho="" valor="10,00" logos={[]} ></ComplexGrid>
+        </Grid>
+        <Grid item xs={12} sm={6} md={4} lg={2}>
+          <ComplexGrid img={imgRedbull} desc="Red Bull" tamanho="" valor="15,00" logos={[]} ></ComplexGrid>
+        </Grid>
+        <Grid item xs={12} sm={6} md={4} lg={2}>
+          <ComplexGrid img={imgBohemia} desc="Bohemia" tamanho=" 350 ML" valor="5,00" logos={[]} ></ComplexGrid>
+        </Grid>
+        <Grid item xs={12} sm={6} md={4} lg={2}>
+          <ComplexGrid img={imgAmistel350} desc="Amstel" tamanho=" 350 ML" valor="5,00" logos={[]} ></ComplexGrid>
+        </Grid>
+        <Grid item xs={12} sm={6} md={4} lg={2}>
+          <ComplexGrid img={imgRefrigerantes} desc="Refrigerantes" tamanho=" 350 ML" valor="5,00" logos={[]} ></ComplexGrid>
+        </Grid>
+        <Grid item xs={12} sm={6} md={4} lg={2}>
+          <ComplexGrid img={imgCoco} desc="COCO Gelado" tamanho="" valor="5,00" logos={[]} ></ComplexGrid>
+        </Grid>
+        <Grid item xs={12} sm={6} md={4} lg={2}>
+          <ComplexGrid img={imgCaipirinha} desc="Caipirinha" tamanho=" 500 ML" valor="10,00" logos={[]} ></ComplexGrid>
+        </Grid>
+        <Grid item xs={12} sm={6} md={4} lg={2}>
+          <ComplexGrid img={imgCaipirinha} desc="Caipiroska" tamanho=" 500 ML" valor="12,00" logos={[logoRoscoff, logoorloff]} ></ComplexGrid>
+        </Grid>
+        <Grid item xs={12} sm={6} md={4} lg={2}>
+          <ComplexGrid img={imgLucky} desc="Lucky Strike" tamanho=" 20 UND" valor="20,00" logos={[]} ></ComplexGrid>
+        </Grid>
+        <Grid item xs={12} sm={6} md={4} lg={2}>
+          <ComplexGrid img={imgLucky} desc="Lucky Strike" tamanho=" 1 UND" valor="1,00" logos={[]} ></ComplexGrid>
+        </Grid>
+        <Grid item xs={12} sm={6} md={4} lg={2}>
+          <ComplexGrid img={imgCaltonC} desc="DUNHILL Mentolado" tamanho=" 20 UND" valor="20,00" logos={[]} ></ComplexGrid>
+        </Grid>
+        <Grid item xs={12} sm={6} md={4} lg={2}>
+          <ComplexGrid img={imgCaltonC} desc="DUNHILL Mentolado" tamanho=" 1 UND" valor="1,00" logos={[]} ></ComplexGrid>
+        </Grid>
+        <Grid item xs={12} sm={6} md={4} lg={2}>
+          <ComplexGrid img={imgCalton} desc="DUNHILL Bland" tamanho=" 1 UND" valor="1,00" logos={[]} ></ComplexGrid>
+        </Grid>
+        <Grid item xs={12} sm={6} md={4} lg={2}>
+          <ComplexGrid img={imgCalton} desc="DUNHILL Bland" tamanho=" 20 UND" valor="20,00" logos={[]} ></ComplexGrid>
+        </Grid>
+        <Grid item xs={12} sm={6} md={4} lg={2}>
+          <ComplexGrid img={imgKent} desc="Kent" tamanho=" 20 UND" valor="20,00" logos={[]} ></ComplexGrid>
+        </Grid>
+        <Grid item xs={12} sm={6} md={4} lg={2}>
+          <ComplexGrid img={imgKent} desc="Kent" tamanho=" 1 UND" valor="1,00" logos={[]} ></ComplexGrid>
+        </Grid>
+        <Grid item xs={12} sm={6} md={4} lg={2}>
+          <ComplexGrid img={imghalls} desc="Halls" tamanho=" 1 UND" valor="2,00" logos={[]} ></ComplexGrid>
+        </Grid>
+        <Grid item xs={12} sm={6} md={4} lg={2}>
+          <ComplexGrid img={imgchiclet} desc="Chiclets" tamanho=" 4 UND" valor="1,00" logos={[]} ></ComplexGrid>
+        </Grid>
+
+
+
+
+
       </Grid>
     </Box>
   );

@@ -32,7 +32,7 @@ export default function ComplexGrid({img,desc,tamanho,valor,logos,bg}) {
 
                 <Box>
                     
-                        <Img alt="torre" src={img} sx={{ borderRadius:3,width:115,height:115 }} />
+                        <Img alt={desc} src={img} sx={{ borderRadius:3,width:115,height:115 }} />
                     
                 </Box>
                 
@@ -40,7 +40,7 @@ export default function ComplexGrid({img,desc,tamanho,valor,logos,bg}) {
                 <Box sx={{display:"flex",justifyContent:"space-around"}}>
 
                     <Box sx={{ display: "flex", flexDirection: "column",marginLeft:2 }}>
-                        <Typography sx={{fontWeight:"bold",textAlign:"center"}} gutterBottom variant="subtitle1" component="div">
+                        <Typography sx={{fontWeight:"bold",textAlign:"center",maxWidth:300}} gutterBottom variant="subtitle1" component="div">
                             {desc} {tamanho} 
                         </Typography>
                        {logos.length>0 && (<Box>
