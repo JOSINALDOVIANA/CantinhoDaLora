@@ -54,14 +54,14 @@ export default function MenuAppBar() {
           label={auth ? 'Ligh' : 'Dark'}
         />
       </FormGroup> */}
-      <AppBar position="static" sx={{backgroundColor:"#192a56",border:0,boxShadow:0}}>
+      <AppBar position="static" sx={{backgroundColor:"#FFFF00",border:0,boxShadow:0}}>
         <Toolbar>
           <IconButton
             size="large"
             edge="start"
-            color="inherit"
+            
             aria-label="menu"
-            sx={{ mr: 2 }}
+            sx={{ mr: 2,color:"#000" }}
             onClick={handleMenu2}
           >
             <MenuIcon/>
@@ -88,7 +88,7 @@ export default function MenuAppBar() {
                 <MenuItem sx={{display:"flex",justifyContent:"space-around",width:"150px"}} onClick={()=>{window.open("https://api.whatsapp.com/send?phone=+5596981325410&text=Oi");handleClose2()}}><BsWhatsapp></BsWhatsapp>Whatsap</MenuItem>
               </Menu>
 
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1,textAlign:"center",fontSize:30 }}>
+          <Typography color="#000" variant="h6" component="div" sx={{ flexGrow: 1,textAlign:"center",fontSize:30 }}>
             Cantinho Da Lora
           </Typography>
           {auth && (

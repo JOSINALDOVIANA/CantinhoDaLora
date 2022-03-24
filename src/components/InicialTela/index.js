@@ -9,7 +9,7 @@ function InicialTela() {
   return (
     <React.Fragment>
       <CssBaseline />
-      <Container maxWidth="lg" sx={{backgroundColor:"#192a56"}}>
+      <Container maxWidth="lg" sx={{backgroundColor:"#FFFF00"}}>
         <Box sx={{  height: '100%',width:"100%" }}>
           <MenuAppBar></MenuAppBar>
           <GridContainer></GridContainer>

@@ -55,7 +55,7 @@ export default function GridContainer() {
     <Box sx={{ flexGrow: 1,marginTop:5,marginBottom:2 }}>
       <Grid container  alignItems="center" spacing={2}>
         <Grid item xs={12} sm={6} md={4} lg={2}>
-         <ComplexGrid bg={"#fff"} img={imgPromo} desc="Promoção do dia: Compre duas torres ganhe uma caipirinha" tamanho="" valor="0,00" logos={[]} ></ComplexGrid>
+         <ComplexGrid bg={"#fff"} img={imgPromo} desc="Promoção do dia: Compre duas torres de R$50,00 e ganhe uma caipirinha" tamanho="" valor="0,00" logos={[]} ></ComplexGrid>
         </Grid>
         <Grid item xs={12} sm={6} md={4} lg={2}>
          <ComplexGrid img={imgtorre} desc="Torre" tamanho="3.5 L" valor=" 50,00" logos={[logoskol,logoitaipava,logobrahma]} ></ComplexGrid>
