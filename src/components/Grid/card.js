@@ -17,40 +17,48 @@ const Img = styled('img')({
 export default function ComplexGrid({img,desc,tamanho,valor,logos,bg}) {
     const theme=useTheme();
     return (
-        <Paper
-            sx={{
-                p: 2,
-                margin: 'auto',
+        // <Paper
+        //     sx={{
+        //         p: 2,
+        //         margin: 'auto',
                                 
-                position: "relative",
-                backgroundColor: (theme) =>
-                    bg?bg:theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
-            }}
-        >
+        //         position: "relative",
+        //         backgroundColor: (theme) =>
+        //             theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
+        //     }}
+        // >
 
-            <Box sx={{ display: "flex",alignItems:"center",justifyContent:"space-around" }}>
+            
+
+
+        // </Paper>
+        <Box sx={{ display: "flex",alignItems:"center",justifyContent:"space-between",
+       backgroundColor: (theme) =>theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
+       position: "relative",
+       borderRadius:1
+        }}>
 
 
                 <Box>
                     
-                        <Img alt={desc} src={img} sx={{ borderRadius:3,width:115,height:115 }} />
+                        <Img alt={desc} src={img} sx={{ borderRadius:0,width:130,height:130 }} />
                     
                 </Box>
                 
                 
-                <Box sx={{display:"flex",justifyContent:"space-around"}}>
+                <Box sx={{display:"flex",padding:1}}>
 
-                    <Box sx={{ display: "flex", flexDirection: "column",marginLeft:2 }}>
+                    <Box sx={{ display: "flex", flexDirection: "column",alignItems:"center"}}>
                         <Typography sx={{fontWeight:"bold",textAlign:"center",maxWidth:300}} gutterBottom variant="subtitle1" component="div">
                             {desc} {tamanho} 
                         </Typography>
-                       {logos.length>0 && (<Box>
-                        <Typography sx={{fontWeight:"bold",fontSize:10,fontFamily:"sans-serif",marginBottom:2}}  variant="body2" gutterBottom>
+                       {logos.length>0 && (<Box sx={{ display: "flex", flexDirection: "column"}}>
+                        <Typography sx={{fontWeight:"bold",fontSize:10,fontFamily:"sans-serif",marginBottom:0}}  variant="body2" gutterBottom>
                             Opções Disponiveis:
                             </Typography>
-                            <Box sx={{ display: "flex", maxWidth: 100,maxHeight:10, justifyContent: "space-around",marginBottom:5,marginLeft:1,alignItems:"center" }}>
+                            <Box sx={{ display: "flex",maxWidth:150, justifyContent: "space-evenly",marginBottom:2 }}>
 
-                            {logos.map(logo=>( <Img alt='imagem' src={logo} sx={{ height: "30%", width: "30%" }}></Img>))}
+                            {logos.map(logo=>( <Img alt='imagem' src={logo} sx={{ height: "40%", width: "40%" }}></Img>))}
                             </Box>
                        </Box>)}
                         
@@ -67,8 +75,5 @@ export default function ComplexGrid({img,desc,tamanho,valor,logos,bg}) {
 
 
             </Box>
-
-
-        </Paper>
     );
 }

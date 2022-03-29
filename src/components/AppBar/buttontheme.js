@@ -9,10 +9,10 @@ import { useTheme } from '@emotion/react';
 
 
 function ButtonThemeComponent() {
-    const colorMode = React.useContext(ColorModeContext);
+   
     const theme = useTheme();
   return (
-    <IconButton sx={{marginTop:theme.spacing(0)}} onClick={colorMode.toggleColorMode} color="inherit">
+    <IconButton   color="inherit">
     {theme.palette.mode === 'dark' ? <Brightness7Icon /> : <Brightness4Icon />}
   </IconButton>
   );

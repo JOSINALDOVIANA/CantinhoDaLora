@@ -5,19 +5,18 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
-import AccountCircle from '@mui/icons-material/AccountCircle';
-import Switch from '@mui/material/Switch';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import FormGroup from '@mui/material/FormGroup';
 import MenuItem from '@mui/material/MenuItem';
 import Menu from '@mui/material/Menu';
 import { BsFacebook,BsInstagram,BsWhatsapp } from "react-icons/bs";
 import { ColorModeContext } from '../../routs';
-import { Avatar, useTheme } from '@mui/material';
-import ButtonThemeComponent from './buttontheme';
-import imagem from "../../assets/cl2.jpeg"
+import {  useTheme } from '@mui/material';
+import Brightness7Icon from '@mui/icons-material/Brightness7';
+import Brightness4Icon from '@mui/icons-material/Brightness4';
+
+
 export default function MenuAppBar() {
-  const {toggleColorMode}=useContext(ColorModeContext);
+  const colorMode = React.useContext(ColorModeContext);
+  
   const theme=useTheme();
   const [auth, setAuth] = React.useState(true);
   
@@ -89,18 +88,18 @@ export default function MenuAppBar() {
                 <MenuItem sx={{display:"flex",justifyContent:"space-around",width:"150px"}} onClick={()=>{window.open("http://www.instagran.com/cantinho_dalora");handleClose2()}}><BsInstagram></BsInstagram>Instagran</MenuItem>
                 <MenuItem sx={{display:"flex",justifyContent:"space-around",width:"150px"}} onClick={()=>{window.open("https://www.facebook.com/cantinhodalora");handleClose2()}}><BsFacebook></BsFacebook>Facebook</MenuItem>
                 <MenuItem sx={{display:"flex",justifyContent:"space-around",width:"150px"}} onClick={()=>{window.open("https://api.whatsapp.com/send?phone=+5596981325410&text=Oi");handleClose2()}}><BsWhatsapp></BsWhatsapp>Whatsap</MenuItem>
-                <MenuItem sx={{display:"flex",justifyContent:"space-around",width:"150px"}} ><ButtonThemeComponent></ButtonThemeComponent>Thema</MenuItem>
+                <MenuItem sx={{display:"flex",justifyContent:"space-around",width:"150px"}} onClick={colorMode.toggleColorMode} >{theme.palette.mode === 'dark' ? <Brightness7Icon size={10} sx={{marginLeft:0}} /> : <Brightness4Icon size={10} sx={{marginLeft:0}}/>}Tema</MenuItem>
                 
               </Menu>
 
           <Typography  variant="h6" component="div" sx={{ flexGrow: 1,textAlign:"center",fontSize:30,color:theme.CL.text }}>
             Cantinho Da Lora
           </Typography>
-          <Avatar
+          {/* <Avatar
         alt="Remy Sharp"
         src={imagem}
        
-      />
+      /> */}
           
         </Toolbar>
       </AppBar>
