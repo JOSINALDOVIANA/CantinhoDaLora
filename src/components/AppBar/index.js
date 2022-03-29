@@ -1,4 +1,4 @@
-import * as React from 'react';
+import  React,{useContext} from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -11,11 +11,14 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 import FormGroup from '@mui/material/FormGroup';
 import MenuItem from '@mui/material/MenuItem';
 import Menu from '@mui/material/Menu';
-
-
 import { BsFacebook,BsInstagram,BsWhatsapp } from "react-icons/bs";
-
+import { ColorModeContext } from '../../routs';
+import { Avatar, useTheme } from '@mui/material';
+import ButtonThemeComponent from './buttontheme';
+import imagem from "../../assets/cl2.jpeg"
 export default function MenuAppBar() {
+  const {toggleColorMode}=useContext(ColorModeContext);
+  const theme=useTheme();
   const [auth, setAuth] = React.useState(true);
   
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -54,14 +57,14 @@ export default function MenuAppBar() {
           label={auth ? 'Ligh' : 'Dark'}
         />
       </FormGroup> */}
-      <AppBar position="static" sx={{backgroundColor:"#FFFF00",border:0,boxShadow:0}}>
+      <AppBar position="fixed" sx={{backgroundColor: theme.palette.mode=="light"?theme.CL.colorPadrao:"#1A2027"}}>
         <Toolbar>
           <IconButton
             size="large"
             edge="start"
             
             aria-label="menu"
-            sx={{ mr: 2,color:"#000" }}
+            sx={{ mr: 2,color:theme.CL.text }}
             onClick={handleMenu2}
           >
             <MenuIcon/>
@@ -86,48 +89,19 @@ export default function MenuAppBar() {
                 <MenuItem sx={{display:"flex",justifyContent:"space-around",width:"150px"}} onClick={()=>{window.open("http://www.instagran.com/cantinho_dalora");handleClose2()}}><BsInstagram></BsInstagram>Instagran</MenuItem>
                 <MenuItem sx={{display:"flex",justifyContent:"space-around",width:"150px"}} onClick={()=>{window.open("https://www.facebook.com/cantinhodalora");handleClose2()}}><BsFacebook></BsFacebook>Facebook</MenuItem>
                 <MenuItem sx={{display:"flex",justifyContent:"space-around",width:"150px"}} onClick={()=>{window.open("https://api.whatsapp.com/send?phone=+5596981325410&text=Oi");handleClose2()}}><BsWhatsapp></BsWhatsapp>Whatsap</MenuItem>
+                <MenuItem sx={{display:"flex",justifyContent:"space-around",width:"150px"}} ><ButtonThemeComponent></ButtonThemeComponent>Thema</MenuItem>
+                
               </Menu>
 
-          <Typography color="#000" variant="h6" component="div" sx={{ flexGrow: 1,textAlign:"center",fontSize:30 }}>
+          <Typography  variant="h6" component="div" sx={{ flexGrow: 1,textAlign:"center",fontSize:30,color:theme.CL.text }}>
             Cantinho Da Lora
           </Typography>
-          {auth && (
-            <div>
-              {/* <IconButton
-                size="large"
-                aria-label="account of current user"
-                aria-controls="menu-appbar"
-                aria-haspopup="true"
-                onClick={handleMenu}
-                color="inherit"
-              >
-                <AccountCircle/>
-              </IconButton> */}
-               {/* <Avatar
+          <Avatar
         alt="Remy Sharp"
         src={imagem}
-        sx={{ width: 56, height: 56 }}
-      /> */}
-              {/* <Menu
-                id="menu-appbar"
-                anchorEl={anchorEl}
-                anchorOrigin={{
-                  vertical: 'top',
-                  horizontal: 'right',
-                }}
-                keepMounted
-                transformOrigin={{
-                  vertical: 'top',
-                  horizontal: 'right',
-                }}
-                open={Boolean(anchorEl)}
-                onClose={handleClose}
-              >
-                <MenuItem onClick={handleClose}>Profile</MenuItem>
-                <MenuItem onClick={handleClose}>My account</MenuItem>
-              </Menu> */}
-            </div>
-          )}
+       
+      />
+          
         </Toolbar>
       </AppBar>
     </Box>

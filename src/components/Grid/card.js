@@ -3,7 +3,7 @@ import { styled } from '@mui/material/styles';
 import Divider from '@mui/material/Divider';
 import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
-import { Box } from '@mui/material';
+import { Box, useTheme } from '@mui/material';
 
 
 
@@ -15,6 +15,7 @@ const Img = styled('img')({
 });
 
 export default function ComplexGrid({img,desc,tamanho,valor,logos,bg}) {
+    const theme=useTheme();
     return (
         <Paper
             sx={{

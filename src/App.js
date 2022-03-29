@@ -1,11 +1,12 @@
 import React from 'react';
 import InicialTela from './components/InicialTela';
+import Rotas from './routs';
 
 
 
 function App() {
   return (
-<InicialTela></InicialTela>
+<Rotas></Rotas>
   );
 }
 
