@@ -32,8 +32,11 @@ export default function ComplexGrid({img,desc,tamanho,valor,logos,bg}) {
 
 
         // </Paper>
-        <Box sx={{ display: "flex",alignItems:"center",justifyContent:"space-between",
+        <Paper
+        elevation={5}
+        sx={{ display: "flex",alignItems:"center",justifyContent:"space-between",
        backgroundColor: (theme) =>theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
+    //    (theme) =>theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
        position: "relative",
        borderRadius:1
         }}>
@@ -41,7 +44,7 @@ export default function ComplexGrid({img,desc,tamanho,valor,logos,bg}) {
 
                 <Box>
                     
-                        <Img alt={desc} src={img} sx={{ borderRadius:0,width:130,height:130 }} />
+                        <Img  alt={desc} src={img} sx={{ borderRadius:0,width:130,height:130 }} />
                     
                 </Box>
                 
@@ -49,7 +52,7 @@ export default function ComplexGrid({img,desc,tamanho,valor,logos,bg}) {
                 <Box sx={{display:"flex",padding:1}}>
 
                     <Box sx={{ display: "flex", flexDirection: "column",alignItems:"center"}}>
-                        <Typography sx={{fontWeight:"bold",textAlign:"center",maxWidth:300}} gutterBottom variant="subtitle1" component="div">
+                        <Typography  sx={{fontWeight:"bold",textAlign:"center",maxWidth:300}} gutterBottom variant="subtitle1" component="div">
                             {desc} {tamanho} 
                         </Typography>
                        {logos.length>0 && (<Box sx={{ display: "flex", flexDirection: "column"}}>
@@ -74,6 +77,6 @@ export default function ComplexGrid({img,desc,tamanho,valor,logos,bg}) {
 
 
 
-            </Box>
+            </Paper>
     );
 }

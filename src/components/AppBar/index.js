@@ -56,14 +56,14 @@ export default function MenuAppBar() {
           label={auth ? 'Ligh' : 'Dark'}
         />
       </FormGroup> */}
-      <AppBar position="fixed" sx={{backgroundColor: theme.palette.mode=="light"?theme.CL.colorPadrao:"#1A2027"}}>
+      <AppBar position="fixed" sx={{backgroundColor: theme.CL.colorPadrao}}>
         <Toolbar>
           <IconButton
             size="large"
             edge="start"
             
             aria-label="menu"
-            sx={{ mr: 2,color:theme.CL.text }}
+            sx={{ mr: 2,color:theme.CL.text}}
             onClick={handleMenu2}
           >
             <MenuIcon/>
@@ -92,7 +92,7 @@ export default function MenuAppBar() {
                 
               </Menu>
 
-          <Typography  variant="h6" component="div" sx={{ flexGrow: 1,textAlign:"center",fontSize:30,color:theme.CL.text }}>
+          <Typography  variant="h6" component="div" sx={{ flexGrow: 1,textAlign:"center",fontSize:35,color:theme.CL.text}}>
             Cantinho Da Lora
           </Typography>
           {/* <Avatar

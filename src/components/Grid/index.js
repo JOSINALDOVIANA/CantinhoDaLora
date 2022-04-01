@@ -59,9 +59,9 @@ export default function GridContainer() {
   return (
     <Box sx={{ flexGrow: 1, marginTop: 0 }}>
       <Grid container alignItems="center" spacing={2}>
-        <Grid item xs={12} sm={6} md={4} lg={2}>
+        {/* <Grid item xs={12} sm={6} md={4} lg={2}>
           <ComplexGrid bg="null" img={imgPromo} desc="Promoção do dia: Compre duas torres de R$50,00 e ganhe uma caipirinha" tamanho="" valor="0,00" logos={[]} ></ComplexGrid>
-        </Grid>
+        </Grid> */}
         <Grid item xs={12} sm={6} md={4} lg={2}>
           <ButtonBase onClick={() => window.open("https://opclient-web.herokuapp.com/totem/ce06443882c49b050a38d99b755f78c7/8a1cb6b06cbf0d2ec6a6556d074ebedb-00595512240")} >
             <ComplexGrid bg="null" img={imgOpclient} desc="Gostou! Deixe-nos suas sugestões, são de Grande Valor para a melhoria de nossos serviços. " tamanho="" valor="0,00" logos={[]} >

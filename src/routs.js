@@ -46,8 +46,8 @@ export default function Rotas() {
           mode,          
         },
         CL:{
-          colorPadrao:mode==="light"?"#2d938e":"#0b4462",
-          text:mode==="light"?"#000":"#fff",
+          colorPadrao:mode==="light"?"#079992":"#2c3e50",
+          text:mode==="light"?"#fff":"#fff",
           
         }
       }),
