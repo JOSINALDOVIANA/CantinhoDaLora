@@ -59,43 +59,100 @@ export default function GridContainer() {
   return (
     <Box sx={{ flexGrow: 1, marginTop: 0 }}>
       <Grid container alignItems="center" spacing={2}>
-        {/* <Grid item xs={12} sm={6} md={4} lg={2}>
-          <ComplexGrid bg="null" img={imgPromo} desc="Promoção do dia: Compre duas torres de R$50,00 e ganhe uma caipirinha" tamanho="" valor="0,00" logos={[]} ></ComplexGrid>
-        </Grid> */}
+
         <Grid item xs={12} sm={6} md={4} lg={2}>
           <ButtonBase onClick={() => window.open("https://opclient-web.herokuapp.com/totem/ce06443882c49b050a38d99b755f78c7/8a1cb6b06cbf0d2ec6a6556d074ebedb-00595512240")} >
-            <ComplexGrid bg="null" img={imgOpclient} desc="Gostou! Deixe-nos suas sugestões, são de Grande Valor para a melhoria de nossos serviços. " tamanho="" valor="0,00" logos={[]} >
-            </ComplexGrid>
+            <ComplexGrid 
+            bg="null" 
+            img={imgOpclient} 
+            desc="Gostou! Deixe-nos suas sugestões, são de Grande Valor para a melhoria de nossos serviços. " 
+            tamanho="" 
+            valor="0,00" 
+            logos={[]} />            
           </ButtonBase>
         </Grid>
+
         <Grid item xs={12} sm={6} md={4} lg={2}>
-          <ComplexGrid img={imgtorre} desc="Torre" tamanho="3.5 L" valor=" 50,00" logos={[logoskol, logoitaipava, logobrahma]} ></ComplexGrid>
+          <ComplexGrid 
+          img={imgtorre} 
+          desc="Torre" 
+          tamanho="3.5 L" 
+          valor=" 50,00" 
+          logos={[logoskol, logoitaipava, logobrahma]} />
         </Grid>
+
+
         <Grid item xs={12} sm={6} md={4} lg={2}>
-          <ComplexGrid img={imgtorre} desc="Torre" tamanho="2.5 L" valor=" 40,00" logos={[logoskol, logoitaipava, logobrahma]} ></ComplexGrid>
+          <ComplexGrid 
+          img={imgtorre}
+          desc="Torre" 
+          tamanho="2.5 L" 
+          valor=" 40,00" 
+          logos={[logoskol, logoitaipava, logobrahma]} />
         </Grid>
         
         <Grid item xs={12} sm={6} md={4} lg={2}>
-          <ComplexGrid img={imglongSkol} desc="Skol Sense" tamanho=" 269 ML" valor="15,00" logos={[]} ></ComplexGrid>
+          <ComplexGrid 
+          img={imglongSkol} 
+          desc="Skol Sense" 
+          tamanho=" 269 ML" 
+          valor="15,00" 
+          logos={[]} />
         </Grid>
+
         <Grid item xs={12} sm={6} md={4} lg={2}>
-          <ComplexGrid img={imglongGt} desc="Skol GT" tamanho=" 269 ML" valor="15,00" logos={[]} ></ComplexGrid>
+          <ComplexGrid 
+          img={imglongGt} 
+          desc="Skol GT" 
+          tamanho=" 269 ML" 
+          valor="15,00" 
+          logos={[]} />
         </Grid>
+
         <Grid item xs={12} sm={6} md={4} lg={2}>
-          <ComplexGrid img={imgHeineken} desc="Heineken" tamanho=" 330 ML" valor="12,00" logos={[]} ></ComplexGrid>
+          <ComplexGrid 
+          img={imgHeineken} 
+          desc="Heineken" 
+          tamanho=" 330 ML" 
+          valor="12,00" 
+          logos={[]} />
         </Grid>
+
         <Grid item xs={12} sm={6} md={4} lg={2}>
-          <ComplexGrid img={imgStellalong} desc="Stella" tamanho=" 275 ML" valor="10,00" logos={[]} ></ComplexGrid>
+          <ComplexGrid 
+          img={imgStellalong} 
+          desc="Stella" 
+          tamanho=" 275 ML" 
+          valor="10,00" 
+          logos={[]} />
         </Grid>
+
         <Grid item xs={12} sm={6} md={4} lg={2}>
-          <ComplexGrid img={imgBudlong} desc="Budweiser" tamanho=" 330 ML" valor="10,00" logos={[]} ></ComplexGrid>
+          <ComplexGrid 
+          img={imgBudlong} 
+          desc="Budweiser" 
+          tamanho=" 330 ML" 
+          valor="10,00" logos={[]} />
         </Grid>
+
         <Grid item xs={12} sm={6} md={4} lg={2}>
-          <ComplexGrid img={imgitaipava269} desc="Itaipava" tamanho=" 269 ML" valor="5,00" logos={[]} ></ComplexGrid>
+          <ComplexGrid 
+          img={imgitaipava269} 
+          desc="Itaipava" 
+          tamanho=" 269 ML" 
+          valor="5,00" 
+          logos={[]} />
         </Grid>
+
         <Grid item xs={12} sm={6} md={4} lg={2}>
-          <ComplexGrid img={imgItaipava350} desc="Itaipava" tamanho=" 350 ML" valor="5,00" logos={[]} ></ComplexGrid>
+          <ComplexGrid 
+          img={imgItaipava350} 
+          esc="Itaipava" 
+          tamanho=" 350 ML" 
+          valor="5,00" 
+          logos={[]} />
         </Grid>
+        
         <Grid item xs={12} sm={6} md={4} lg={2}>
           <ComplexGrid img={imgItaipavalitro} desc="Itaipava" tamanho=" 1 L" valor="15,00" logos={[]} ></ComplexGrid>
         </Grid>

@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&family=Ubuntu:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lavishly+Yours&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&family=Pacifico&display=swap');
 body,html {
   margin: 0;
   padding: 0;
@@ -38,10 +39,10 @@ code {
   height: 100vh;
 }
 .img{
-  transition: 0.5s;
+  transition: 0,5s;
 }
 
 .img:hover{
-  transform: scale(0.98);
-  animation-delay: 0.2s;
+  transform: scale(0.95);
+  animation-delay: 1s;
 }

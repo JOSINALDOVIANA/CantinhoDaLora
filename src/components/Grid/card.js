@@ -17,28 +17,18 @@ const Img = styled('img')({
 export default function ComplexGrid({img,desc,tamanho,valor,logos,bg}) {
     const theme=useTheme();
     return (
-        // <Paper
-        //     sx={{
-        //         p: 2,
-        //         margin: 'auto',
-                                
-        //         position: "relative",
-        //         backgroundColor: (theme) =>
-        //             theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
-        //     }}
-        // >
-
-            
-
-
-        // </Paper>
+       
         <Paper
+        className='img'
         elevation={5}
-        sx={{ display: "flex",alignItems:"center",justifyContent:"space-between",
-       backgroundColor: (theme) =>theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
-    //    (theme) =>theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
+        sx={{ 
+        display: "flex",
+        alignItems:"center",
+        justifyContent:"space-between",
+        backgroundColor: (theme) =>theme.palette.mode === 'dark' ? '#33605a' : '#fff',   
        position: "relative",
-       borderRadius:1
+       borderRadius:1,
+       fontFamily:"Roboto"
         }}>
 
 
@@ -55,15 +45,18 @@ export default function ComplexGrid({img,desc,tamanho,valor,logos,bg}) {
                         <Typography  sx={{fontWeight:"bold",textAlign:"center",maxWidth:300}} gutterBottom variant="subtitle1" component="div">
                             {desc} {tamanho} 
                         </Typography>
-                       {logos.length>0 && (<Box sx={{ display: "flex", flexDirection: "column"}}>
-                        <Typography sx={{fontWeight:"bold",fontSize:10,fontFamily:"sans-serif",marginBottom:0}}  variant="body2" gutterBottom>
+
+                       {logos.length>0 && (
+                       <Box sx={{ display: "flex", flexDirection: "column"}}>
+                        <Typography sx={{fontWeight:"bold",fontSize:10,marginBottom:0}}  variant="body2" gutterBottom>
                             Opções Disponiveis:
                             </Typography>
                             <Box sx={{ display: "flex",maxWidth:150, justifyContent: "space-evenly",marginBottom:2 }}>
 
                             {logos.map(logo=>( <Img alt='imagem' src={logo} sx={{ height: "40%", width: "40%" }}></Img>))}
                             </Box>
-                       </Box>)}
+                       </Box>
+                       )}
                         
                     </Box>
 

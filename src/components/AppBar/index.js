@@ -44,26 +44,20 @@ export default function MenuAppBar() {
 
   return (
     <Box sx={{ flexGrow: 1 }}>
-      {/* <FormGroup>
-        <FormControlLabel
-          control={
-            <Switch
-              checked={auth}
-              onChange={handleChange}
-              aria-label="Tema"
-            />
-          }
-          label={auth ? 'Ligh' : 'Dark'}
-        />
-      </FormGroup> */}
-      <AppBar position="fixed" sx={{backgroundColor: theme.CL.colorPadrao}}>
+    
+      <AppBar position="fixed" sx={{
+        backgroundColor:theme.palette.mode=="light"?"#ffffff":"#33605a",
+        color:theme.palette.mode=="light"?"#140d1a":"#ffffff",
+        fontFamily:"Roboto",
+        boxShadow:0
+        }}>
         <Toolbar>
           <IconButton
             size="large"
             edge="start"
-            
+            color='inherit'
             aria-label="menu"
-            sx={{ mr: 2,color:theme.CL.text}}
+            sx={{ mr: 2}}
             onClick={handleMenu2}
           >
             <MenuIcon/>
@@ -92,7 +86,7 @@ export default function MenuAppBar() {
                 
               </Menu>
 
-          <Typography  variant="h6" component="div" sx={{ flexGrow: 1,textAlign:"center",fontSize:35,color:theme.CL.text}}>
+          <Typography  variant="h3" component="p" sx={{ flexGrow: 1,textAlign:"center"}}>
             Cantinho Da Lora
           </Typography>
           {/* <Avatar

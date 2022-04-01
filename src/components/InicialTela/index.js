@@ -21,56 +21,47 @@ function InicialTela() {
     <React.Fragment>
       <CssBaseline />
       <MenuAppBar></MenuAppBar>
-      {/* <Box sx={{ flexGrow: 1, backgroundColor: theme.CL.colorPadrao, height: theme.spacing(40),display:"flex",justifyContent:"space-evenly",alignItems:"center" }} elevation={5} >
-        <Img className='img' alt="torre" sx={{ marginTop: theme.spacing(10),width:theme.spacing(50),height:theme.spacing(40) }} src={Torre}></Img>
-        <Typography
-          sx={{
-            color: theme.CL.text, border: 0,
-            backgroundColor: theme.CL.colorPadrao,
-            // width: theme.spacing(50),
-            fontFamily: 'monospace',
-            fontWeight:"bold",
-            fontSize:15,
-            marginTop:theme.spacing(8),
-            color:theme.CL.text,
-            paddingRight:2
-
-            
-
-          }} >Promoção do dia Na Compra de duas torres de R$50,00 ganhe uma caipirinha. </Typography>
-      </Box> */}
       <Paper
         sx={{
-          width: "100%",
-          height: "50%",          
+          flexGrow:1,          
+          height: "50%",
+          borderRadius: 0,
           position: "relative",
-          backgroundColor: theme.CL.colorPadrao,
-          display:"flex",
-          alignItems:"center"
+          backgroundColor: theme.palette.mode == "light" ? "#85cc9c" : "#33605a",
+          color: theme.palette.mode == "light" ? "#ffffff" : "#ffffff",
+          display: "flex",
+          alignItems: "center",
+          fontFamily: "Roboto"
         }}
         elevation={0}
       >
-<Img className='img' alt="torre" sx={{ 
-  marginTop: theme.spacing(5),
-  width:theme.spacing(30),height:theme.spacing(20) }} src={Torre}></Img>
-        <Typography
+        <Img className='img' alt="torre"
           sx={{
-            color: theme.CL.text,
-             border: 0,            
-            // width: theme.spacing(50),
-            fontFamily: 'Pacifico',
-            // fontWeight:"bold",
-            fontSize:30,
+            marginTop: theme.spacing(5),
+            width: theme.spacing(30),
+            height: theme.spacing(20)
+          }}
+          src={Torre}></Img>
+
+        <Typography variant='p' component="h1"
+          sx={{
+            border: 0,
             marginTop:theme.spacing(1),
-            color:theme.CL.text,
-            paddingRight:2,
-
-
-            
-
-          }} >Promoção do dia Na Compra de duas torres de R$50,00 ganhe uma caipirinha. </Typography>
+            marginTop: theme.spacing(1),
+            paddingRight: 2,
+            fontFamily:"Oswald",
+           
+          }} >
+          Promoção do dia, Na Compra de duas torres de R$50,00 ganhe uma caipirinha.
+        </Typography>
       </Paper>
-      <Container maxWidth="lg" sx={{ backgroundColor: theme.CL.colorPadrao, paddingBottom: 5, paddingTop: 1 }}>
+      <Container maxWidth="lg" sx={{
+        backgroundColor: theme.palette.mode == "light" ? "#85cc9c" : "#33605a",
+        color: theme.palette.mode == "light" ? "#4180ab" : "#8ab3cf",
+        paddingBottom: 5,
+        paddingTop: theme.spacing(10),
+        
+      }}>
         <GridContainer></GridContainer>
       </Container>
     </React.Fragment>

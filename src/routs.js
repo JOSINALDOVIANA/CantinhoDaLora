@@ -45,11 +45,7 @@ export default function Rotas() {
         palette: {
           mode,          
         },
-        CL:{
-          colorPadrao:mode==="light"?"#079992":"#2c3e50",
-          text:mode==="light"?"#fff":"#fff",
-          
-        }
+        
       }),
     [mode],
   );
