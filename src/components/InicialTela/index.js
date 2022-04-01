@@ -31,7 +31,8 @@ function InicialTela() {
           color: theme.palette.mode == "light" ? "#ffffff" : "#ffffff",
           display: "flex",
           alignItems: "center",
-          fontFamily: "Roboto"
+          fontFamily: "Roboto",
+          paddingTop:theme.spacing(10)
         }}
         elevation={0}
       >
