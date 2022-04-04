@@ -21,44 +21,47 @@ function InicialTela() {
     <React.Fragment>
       <CssBaseline />
       <MenuAppBar></MenuAppBar>
-      <Paper
+<Container
+sx={{marginTop:theme.spacing(15)}}
+>
+<Paper
         sx={{
           flexGrow:1,          
           height: "50%",
           borderRadius: 0,
           position: "relative",
-          backgroundColor: theme.palette.mode == "light" ? "#85cc9c" : "#33605a",
-          color: theme.palette.mode == "light" ? "#ffffff" : "#ffffff",
+          backgroundColor: theme.palette.mode == "light" ? "#ffffff" : "#33605a",
+          color: theme.palette.mode == "light" ? "#33605a" : "#ffffff",
           display: "flex",
           alignItems: "center",
-          fontFamily: "Roboto",
-          paddingTop:theme.spacing(10)
+          padding:theme.spacing(2) ,
+          
         }}
         elevation={0}
       >
         <Img className='img' alt="torre"
           sx={{
-            marginTop: theme.spacing(5),
+            marginTop: theme.spacing(2),
             width: theme.spacing(30),
             height: theme.spacing(20)
           }}
           src={Torre}></Img>
 
         <Typography variant='p' component="h1"
-          sx={{
-            border: 0,
-            marginTop:theme.spacing(1),
-            marginTop: theme.spacing(1),
-            paddingRight: 2,
+          sx={{          
             fontFamily:"Oswald",
+            textAlign:"justify",
+            
+            fontWeight:"100"
            
           }} >
           Promoção do dia, Na Compra de duas torres de R$50,00 ganhe uma caipirinha.
         </Typography>
       </Paper>
+</Container>
       <Container maxWidth="lg" sx={{
-        backgroundColor: theme.palette.mode == "light" ? "#85cc9c" : "#33605a",
-        color: theme.palette.mode == "light" ? "#4180ab" : "#8ab3cf",
+         backgroundColor: theme.palette.mode == "light" ? "#ffffff" : "#33605a",
+         color:theme.palette.mode=="light"?"#ffffff":"#ffffff",
         paddingBottom: 5,
         paddingTop: theme.spacing(10),
         

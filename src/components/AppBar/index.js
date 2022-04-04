@@ -46,12 +46,19 @@ export default function MenuAppBar() {
     <Box sx={{ flexGrow: 1 }}>
     
       <AppBar position="fixed" sx={{
-        backgroundColor:theme.palette.mode=="light"?"#ffffff":"#33605a",
-        color:theme.palette.mode=="light"?"#140d1a":"#ffffff",
-        fontFamily:"Roboto",
+         backgroundColor: theme.palette.mode == "light" ? "#85cc9c" : "#33605a",
+        color:theme.palette.mode=="light"?"#ffffff":"#ffffff",
+      
         boxShadow:0
         }}>
         <Toolbar>
+        <Typography  variant="h4" component="p" sx={{ 
+            flexGrow: 1,
+            textAlign:"initial",  
+            fontFamily:"Osvald",
+            }}>
+            Cantinho Da Lora
+          </Typography>
           <IconButton
             size="large"
             edge="start"
@@ -82,13 +89,11 @@ export default function MenuAppBar() {
                 <MenuItem sx={{display:"flex",justifyContent:"space-around",width:"150px"}} onClick={()=>{window.open("http://www.instagran.com/cantinho_dalora");handleClose2()}}><BsInstagram></BsInstagram>Instagran</MenuItem>
                 <MenuItem sx={{display:"flex",justifyContent:"space-around",width:"150px"}} onClick={()=>{window.open("https://www.facebook.com/cantinhodalora");handleClose2()}}><BsFacebook></BsFacebook>Facebook</MenuItem>
                 <MenuItem sx={{display:"flex",justifyContent:"space-around",width:"150px"}} onClick={()=>{window.open("https://api.whatsapp.com/send?phone=+5596981325410&text=Oi");handleClose2()}}><BsWhatsapp></BsWhatsapp>Whatsap</MenuItem>
-                <MenuItem sx={{display:"flex",justifyContent:"space-around",width:"150px"}} onClick={colorMode.toggleColorMode} >{theme.palette.mode === 'dark' ? <Brightness7Icon size={10} sx={{marginLeft:0}} /> : <Brightness4Icon size={10} sx={{marginLeft:0}}/>}Tema</MenuItem>
+                {/* <MenuItem sx={{display:"flex",justifyContent:"space-around",width:"150px"}} onClick={colorMode.toggleColorMode} >{theme.palette.mode === 'dark' ? <Brightness7Icon size={10} sx={{marginLeft:0}} /> : <Brightness4Icon size={10} sx={{marginLeft:0}}/>}Tema</MenuItem> */}
                 
               </Menu>
 
-          <Typography  variant="h3" component="p" sx={{ flexGrow: 1,textAlign:"center"}}>
-            Cantinho Da Lora
-          </Typography>
+         
           {/* <Avatar
         alt="Remy Sharp"
         src={imagem}

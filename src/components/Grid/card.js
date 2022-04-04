@@ -19,7 +19,7 @@ export default function ComplexGrid({img,desc,tamanho,valor,logos,bg}) {
     return (
        
         <Paper
-        className='img'
+        
         elevation={5}
         sx={{ 
         display: "flex",
