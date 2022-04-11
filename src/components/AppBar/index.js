@@ -3,15 +3,17 @@ import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
+import imagem from "../../assets/cl.jpeg"
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import Menu from '@mui/material/Menu';
 import { BsFacebook,BsInstagram,BsWhatsapp } from "react-icons/bs";
 import { ColorModeContext } from '../../routs';
-import {  useTheme } from '@mui/material';
+import {  Avatar, useTheme } from '@mui/material';
 import Brightness7Icon from '@mui/icons-material/Brightness7';
 import Brightness4Icon from '@mui/icons-material/Brightness4';
+import { textAlign } from '@mui/system';
 
 
 export default function MenuAppBar() {
@@ -43,14 +45,14 @@ export default function MenuAppBar() {
   };
 
   return (
-    <Box sx={{ flexGrow: 1 }}>
+    <Box sx={{ flexGrow: 1, }}>
     
-      <AppBar position="fixed" sx={{
-         backgroundColor: theme.palette.mode == "light" ? "#85cc9c" : "#33605a",
-        color:theme.palette.mode=="light"?"#ffffff":"#ffffff",
-      
-        boxShadow:0
-        }}>
+      <AppBar position="fixed"  sx={{
+         backgroundColor: "#ffffff",
+         color:"#545454",
+         boxShadow:0,
+         textAlign:"center"
+         }}>
         <Toolbar>
         <Typography  variant="h4" component="p" sx={{ 
             flexGrow: 1,
@@ -59,6 +61,11 @@ export default function MenuAppBar() {
             }}>
             Cantinho Da Lora
           </Typography>
+          {/* <Avatar
+        alt="Remy Sharp"
+        src={imagem}
+       
+      /> */}
           <IconButton
             size="large"
             edge="start"
@@ -94,11 +101,7 @@ export default function MenuAppBar() {
               </Menu>
 
          
-          {/* <Avatar
-        alt="Remy Sharp"
-        src={imagem}
-       
-      /> */}
+          
           
         </Toolbar>
       </AppBar>

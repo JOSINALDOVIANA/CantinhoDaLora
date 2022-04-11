@@ -31,7 +31,7 @@ sx={{marginTop:theme.spacing(15)}}
           borderRadius: 0,
           position: "relative",
           backgroundColor: theme.palette.mode == "light" ? "#ffffff" : "#33605a",
-          color: theme.palette.mode == "light" ? "#33605a" : "#ffffff",
+          color: theme.palette.mode == "light" ? "#545454" : "#ffffff",
           display: "flex",
           alignItems: "center",
           padding:theme.spacing(2) ,
