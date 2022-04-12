@@ -61,7 +61,7 @@ export default function GridContainer() {
     <Box sx={{
       flexGrow: 1,
       marginTop: 0,
-      backgroundColor: theme.palette.mode == "light" ? "#ffffff" : "#ffd5",
+      backgroundColor:"#2C3E50",
       color:theme.palette.mode=="light"?"#000":"#000",
     }}>
       <Grid container alignItems="center" spacing={2}>
@@ -120,7 +120,7 @@ export default function GridContainer() {
             img={imgHeineken}
             desc="Heineken"
             tamanho=" 330 ML"
-            valor="12,00"
+            valor="10,00"
             logos={[]} />
         </Grid>
 

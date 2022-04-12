@@ -2,6 +2,7 @@ import { createTheme, ThemeProvider, useTheme } from "@mui/material";
 import React, { createContext, useContext } from "react";
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import InicialTela from "./components/InicialTela/index";
+import { DadosProvider } from "./components/provider/dados";
 
 
 
@@ -51,6 +52,7 @@ export default function Rotas() {
   );
 
     return (
+      <DadosProvider>
         <ColorModeContext.Provider value={colorMode}>
             <ThemeProvider theme={theme}>
             <ContextProvider>
@@ -62,7 +64,7 @@ export default function Rotas() {
             </ContextProvider>
             </ThemeProvider>
         </ColorModeContext.Provider>
-
+        </DadosProvider>
 
 
     );

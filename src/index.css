@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lavishly+Yours&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&family=Pacifico&display=swap');
-body,html {
+body,html, #root {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -12,7 +12,9 @@ body,html {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  
+  background-color: #2C3E50;
+  width: 100vw;
+  height: 100vh;
 }
 
 code {
@@ -34,10 +36,7 @@ code {
   border-radius: 20px;
   border: 3px solid transparent;
 }
-#root{
-  width: 100vw;
-  height: 100vh;
-}
+
 .img{
   transition: 0,5s;
 }

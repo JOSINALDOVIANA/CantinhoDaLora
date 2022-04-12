@@ -48,8 +48,8 @@ export default function MenuAppBar() {
     <Box sx={{ flexGrow: 1, }}>
     
       <AppBar position="fixed"  sx={{
-         backgroundColor: "#ffffff",
-         color:"#545454",
+         backgroundColor: "#000",
+         color:"#FFFFFF",
          boxShadow:0,
          textAlign:"center"
          }}>
