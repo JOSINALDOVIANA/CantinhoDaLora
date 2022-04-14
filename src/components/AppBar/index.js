@@ -14,8 +14,9 @@ import {  Avatar, useTheme } from '@mui/material';
 import Brightness7Icon from '@mui/icons-material/Brightness7';
 import Brightness4Icon from '@mui/icons-material/Brightness4';
 import { textAlign } from '@mui/system';
-
-
+import ImageList from '@mui/material/ImageList';
+import ImageListItem from '@mui/material/ImageListItem';
+import cant from "../../assets/CANTINHO DA LORA2.png"
 export default function MenuAppBar() {
   const colorMode = React.useContext(ColorModeContext);
   
@@ -47,25 +48,38 @@ export default function MenuAppBar() {
   return (
     <Box sx={{ flexGrow: 1, }}>
     
-      <AppBar position="fixed"  sx={{
-         backgroundColor: "#000",
+      <AppBar position="static"  sx={{
+         backgroundColor: "#74BDCB",
          color:"#FFFFFF",
          boxShadow:0,
-         textAlign:"center"
+         textAlign:"center",
+         padding: 1,
+         
          }}>
-        <Toolbar>
-        <Typography  variant="h4" component="p" sx={{ 
+        <Toolbar sx={{display:"flex" ,
+         justifyContent:"space-between"}}>
+        {/* <Typography  variant="h4" component="p" sx={{ 
             flexGrow: 1,
             textAlign:"initial",  
             fontFamily:"Osvald",
             }}>
             Cantinho Da Lora
-          </Typography>
+          </Typography> */}
           {/* <Avatar
         alt="Remy Sharp"
         src={imagem}
        
       /> */}
+        
+        
+          <img
+            src={`${cant}`}            
+            alt="logo"
+            loading="lazy"
+            style={{width:"15%"}}
+          />
+       
+    
           <IconButton
             size="large"
             edge="start"

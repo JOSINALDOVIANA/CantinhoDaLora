@@ -47,6 +47,7 @@ import imgHeineken from '../../assets/heineken.jpg'
 import imgBudlong from '../../assets/budweiserlong.jpg'
 import imgStellalong from '../../assets/stella.jpg'
 
+
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
   ...theme.typography.body2,
@@ -61,12 +62,11 @@ export default function GridContainer() {
     <Box sx={{
       flexGrow: 1,
       marginTop: 0,
-      backgroundColor:"#2C3E50",
+      backgroundColor:"#E7F2F8",
       color:theme.palette.mode=="light"?"#000":"#000",
     }}>
       <Grid container alignItems="center" spacing={2}>
-
-        <Grid item xs={12} sm={6} md={4} lg={4}>
+        {/* <Grid item xs={12} sm={6} md={4} lg={4}>
           <ButtonBase onClick={() => window.open("https://opclient-web.herokuapp.com/totem/ce06443882c49b050a38d99b755f78c7/8a1cb6b06cbf0d2ec6a6556d074ebedb-00595512240")} >
             <ComplexGrid
               bg="null"
@@ -76,9 +76,9 @@ export default function GridContainer() {
               valor="0,00"
               logos={[]} />
           </ButtonBase>
-        </Grid>
+        </Grid> */}
 
-        <Grid item xs={12} sm={6} md={4} lg={4}>
+<Grid item xs={12} sm={6} md={4} lg={4}>
           <ComplexGrid
             img={imgtorre}
             desc="Torre"
@@ -243,11 +243,6 @@ export default function GridContainer() {
         <Grid item xs={12} sm={6} md={4} lg={4}>
           <ComplexGrid img={imgchiclet} desc="Chiclets" tamanho=" 4 UND" valor="1,00" logos={[]} ></ComplexGrid>
         </Grid>
-
-
-
-
-
       </Grid>
     </Box>
   );

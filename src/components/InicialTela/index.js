@@ -24,7 +24,7 @@ function InicialTela() {
       <CssBaseline />
       <MenuAppBar></MenuAppBar>
       <Container
-        sx={{ marginTop: theme.spacing(15),backgroundColor:"#2C3E50" }}
+        sx={{paddingTop:theme.spacing(5),backgroundColor:"#E7F2F8" }}
       >
         <Paper
           sx={{
@@ -32,8 +32,8 @@ function InicialTela() {
             height: "50%",
             borderRadius: 0,
             position: "relative",
-            backgroundColor: "#2C3E50",
-            color:  "#ffffff",
+            backgroundColor: "#E7F2F8",
+            color:  "#000",
             display: "flex",
             alignItems: "center",
             padding: theme.spacing(2),
@@ -62,10 +62,10 @@ function InicialTela() {
         </Paper>
       </Container>
       <Container maxWidth="lg" sx={{
-        backgroundColor: "#2C3E50",
+        backgroundColor: "#E7F2F8",
         color: theme.palette.mode == "light" ? "#ffffff" : "#ffffff",
         paddingBottom: 5,
-        paddingTop: theme.spacing(10),
+        paddingTop: theme.spacing(1),
 
       }}>
         <GridContainer></GridContainer>

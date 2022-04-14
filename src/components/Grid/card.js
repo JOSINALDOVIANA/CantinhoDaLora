@@ -29,7 +29,8 @@ export default function ComplexGrid({img,desc,tamanho,valor,logos,bg}) {
        position: "relative",
        borderRadius:1,
        fontFamily:"Roboto"
-        }}>
+        }}
+        >
 
 
                 <Box>
