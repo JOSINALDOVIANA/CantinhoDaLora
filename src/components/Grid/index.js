@@ -62,8 +62,8 @@ export default function GridContainer() {
     <Box sx={{
       flexGrow: 1,
       marginTop: 0,
-      backgroundColor:"#E7F2F8",
-      color:theme.palette.mode=="light"?"#000":"#000",
+      backgroundColor:"#fff",
+      color:"#000",
     }}>
       <Grid container alignItems="center" spacing={2}>
         {/* <Grid item xs={12} sm={6} md={4} lg={4}>
