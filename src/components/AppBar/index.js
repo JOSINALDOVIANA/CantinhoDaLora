@@ -16,7 +16,7 @@ import Brightness4Icon from '@mui/icons-material/Brightness4';
 import { textAlign } from '@mui/system';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
-import cant from "../../assets/CANTINHO DA LORA2.png"
+import cant from "../../assets/CANTINHO DA LORA.png"
 export default function MenuAppBar() {
   const colorMode = React.useContext(ColorModeContext);
   
