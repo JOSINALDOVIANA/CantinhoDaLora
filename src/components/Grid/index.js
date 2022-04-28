@@ -27,6 +27,7 @@ import imgSkolpm from '../../assets/skol_pm.jpg'
 import imgSkolpm269 from '../../assets/skol_pm_269.jpg'
 import imgBrahmadp600 from '../../assets/brahmadp600.jpg'
 import imgBrahmadp350 from '../../assets/brahmadp350.jpeg'
+import imgimperio from '../../assets/imperio.jpg'
 import imgBrahmaChop from '../../assets/brahmaC.jpg'
 import imgIcelimao from '../../assets/icelimao.jpg'
 import imgRedbull from '../../assets/redbull.jpg'
@@ -203,6 +204,9 @@ export default function GridContainer() {
         </Grid>
         <Grid item xs={12} sm={6} md={4} lg={4}>
           <ComplexGrid img={imgRefrigerantes} desc="Refrigerantes" tamanho=" 350 ML" valor="5,00" logos={[]} ></ComplexGrid>
+        </Grid>
+        <Grid item xs={12} sm={6} md={4} lg={4}>
+          <ComplexGrid img={imgimperio} desc="Cerveja Imperio puro malte" tamanho=" 269 ML" valor="5,00" logos={[]} ></ComplexGrid>
         </Grid>
         <Grid item xs={12} sm={6} md={4} lg={4}>
           <ComplexGrid img={imgCoco} desc="COCO Gelado" tamanho="" valor="5,00" logos={[]} ></ComplexGrid>
